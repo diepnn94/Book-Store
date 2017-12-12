@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BookStore</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BookStore</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li ><a href="#!/books/add">Add Book</a></li>
+      </ul>
+  </div>
+</nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <!-- special directive that angular use to direct all the views -->
+          <div ng-view>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/app.js"></script>
+    <script src="/controllers/books.js"></script>
+    <script src="/controllers/genres.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div class="panel panel-default" ng-init="getBooks()">
+  <!-- in order to run this need to call the function getBooks(), called it by ng-init -->
+  <div class="panel-heading">
+    <h3 class="panel-title">Latest Book</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <!-- the response return is in an array, use angular repeat to loop throught response-->
+      <div ng-repeat="book in books">
+        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+            <h4>{{book.title}}</h4>
+            <p>{{book.description}}</p>
+            <!-- href need to begin with #! due to changes in angular update -->
+            <a class="btn btn-primary" href="#!/books/details/{{book._id}} "> View Details</a>
+          </div>
+          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+            <img class="thumbnail" src= "{{book.image_url}}" alt="The Image Cannot Be Displayed" >
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
